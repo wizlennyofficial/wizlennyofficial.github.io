@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Wizlenny's official music website. Discover my music, latest releases and journey.">
+  <title>Wizlenny | Born for a Purpose 🦅</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #080808;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      padding: 22px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #292929;
+    }
+    .logo { color: #e4bd70; font-size: 25px; font-weight: bold; }
+    header span { font-size: 12px; color: #bbb; }
+    .hero {
+      min-height: 75vh;
+      padding: 80px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(ellipse at top, #332719, #080808 68%);
+    }
+    .eagle { font-size: 45px; margin-bottom: 12px; }
+    h1 { font-size: clamp(42px, 10vw, 76px); line-height: 1.1; }
+    .gold { color: #e4bd70; }
+    .hero p { color: #ccc; margin: 20px 0 28px; }
+    .button {
+      display: inline-block;
+      background: #e4bd70;
+      color: #080808;
+      padding: 13px 22px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 5px;
+    }
+    section { padding: 55px 20px; max-width: 850px; margin: auto; }
+    h2 { font-size: 29px; margin-bottom: 18px; }
+    .card {
+      background: #151515;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 23px;
+      margin: 15px 0;
+    }
+    .card p, .about p { color: #ccc; }
+    .links { margin-top: 15px; }
+    .links a { color: #e4bd70; margin-right: 14px; }
+    footer {
+      text-align: center;
+      padding: 28px 15px;
+      border-top: 1px solid #292929;
+      color: #999;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">WIZLENNY</div>
+    <span>OFFICIAL ARTIST WEBSITE</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eagle">🦅</div>
+      <p class="gold">MUSIC • FAITH • PURPOSE</p>
+      <h1>I'm <span class="gold">Wizlenny.</span></h1>
+      <p>Born for a Purpose.</p>
+      <a class="button" href="#music">LISTEN TO MY MUSIC</a>
+    </section>
+
+    <section id="music">
+      <h2>My <span class="gold">Music</span></h2>
+      <div class="card">
+        <h3>Heaven's Militants</h3>
+        <p>A song of faith, purpose and standing for God's Kingdom.</p>
+        <div class="links">
+          <a href="https://open.spotify.com/search/Wizlenny%20Heaven%27s%20Militants">Spotify</a>
+          <a href="https://music.apple.com/">Apple Music</a>
+          <a href="https://www.youtube.com/results?search_query=Wizlenny+Heavens+Militants">YouTube</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Royalty (feat. TheeGreat)</h3>
+        <p>Discover the music and the message.</p>
+        <div class="links">
+          <a href="https://open.spotify.com/search/Wizlenny%20Royalty">Spotify</a>
+          <a href="https://music.apple.com/">Apple Music</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Blessings</h3>
+        <p>Wizlenny, Ben Carlos &amp; TheeGreat.</p>
+        <div class="links">
+          <a href="https://open.spotify.com/search/Wizlenny%20Blessings">Spotify</a>
+          <a href="https://www.youtube.com/results?search_query=Wizlenny+Ben+Carlos+TheeGreat+Blessings">YouTube</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Grateful</h3>
+        <p>Grateful to God through every season of life.</p>
+        <p>More music links coming soon.</p>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About <span class="gold">Wizlenny</span></h2>
+      <p>Wizlenny is an upcoming Nigerian artiste whose music explores faith, love, life and purpose. Through every song, he aims to share meaningful messages and connect with listeners.</p>
+      <p style="margin-top:15px">Heaven's Militants and Royalty available on all music platforms.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Wizlenny • Born for a Purpose 🦅</p>
+    <p style="margin-top:8px">© <span id="year"></span> Wizlenny. All rights reserved.</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
