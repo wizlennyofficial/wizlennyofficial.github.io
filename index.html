@@ -131,5 +131,36 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <section id="contact" style="background:#111;color:#fff;padding:40px 20px;text-align:center;border-radius:12px;margin:30px auto;max-width:800px;">
+  <h2 style="color:#d4af37;">Contact Wizlenny</h2>
+  <p>For bookings, collaborations, features and business enquiries, reach out to me.</p>
+
+  <p>
+    <a href="mailto:wizlenny8@gmail.com"
+       style="display:inline-block;background:#d4af37;color:#111;padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:bold;">
+      Email Wizlenny
+    </a>
+  </p>
+
+  <h3>Send an Enquiry</h3>
+  <form action="https://formsubmit.co/wizlenny8@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New enquiry from Wizlenny's website">
+    <input type="text" name="name" placeholder="Your name" required
+      style="width:90%;padding:12px;margin:8px;border-radius:5px;">
+    <input type="email" name="email" placeholder="Your email address" required
+      style="width:90%;padding:12px;margin:8px;border-radius:5px;">
+    <input type="text" name="subject" placeholder="Subject of enquiry" required
+      style="width:90%;padding:12px;margin:8px;border-radius:5px;">
+    <textarea name="message" placeholder="Write your message here..." required rows="5"
+      style="width:90%;padding:12px;margin:8px;border-radius:5px;"></textarea>
+    <button type="submit"
+      style="background:#d4af37;color:#111;padding:12px 24px;border:0;border-radius:6px;font-weight:bold;">
+      Send Enquiry
+    </button>
+  </form>
+</section>
+
+  
 </body>
 </html>
