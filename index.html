@@ -7,67 +7,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Wizlenny is an independent Nigerian music artist creating Christian music, Afrobeats and love songs. Discover Grateful, Blessings, Royalty and Heaven's Militants, explore his musical journey and find official streaming links.">
   <title>Wizlenny | Born for a Purpose 🦅</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Arial, sans-serif;
-      background: #080808;
-      color: #fff;
-      line-height: 1.6;
-    }
+  
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #f5f2eb;
+    line-height: 1.7;
+  }
+
+  header {
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #30271a;
+    background: #0b0b0b;
+  }
+
+  .logo {
+    color: #e4bd70;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  header span {
+    font-size: 11px;
+    color: #c4bba9;
+    letter-spacing: 1.5px;
+    text-align: right;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 90px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 50% 10%, #49351e 0%, #19130d 35%, #080808 75%);
+    border-bottom: 1px solid #30271a;
+  }
+
+  .eagle {
+    font-size: 54px;
+    margin-bottom: 18px;
+    filter: drop-shadow(0 0 15px #a9823c55);
+  }
+
+  h1 {
+    font-size: clamp(42px, 10vw, 76px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+  }
+
+  .gold {
+    color: #e4bd70;
+  }
+
+  .hero p {
+    color: #d0c5b3;
+    margin: 20px 0 28px;
+    letter-spacing: 2px;
+  }
+
+  .button {
+    display: inline-block;
+    background: linear-gradient(135deg, #f2d795, #c99a48);
+    color: #100d08;
+    padding: 14px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 5px;
+    box-shadow: 0 5px 22px #c99a4825;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px #c99a4840;
+  }
+
+  section {
+    padding: 65px 22px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  h2 {
+    font-size: clamp(27px, 5vw, 35px);
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .card {
+    background: linear-gradient(145deg, #191919, #101010);
+    border: 1px solid #393126;
+    border-radius: 14px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 8px 25px #00000035;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .card:hover {
+    border-color: #a9874d;
+    transform: translateY(-2px);
+  }
+
+  .card h3 {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .card p,
+  .about p {
+    color: #c8c3ba;
+  }
+
+  .links {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 18px;
+  }
+
+  .links a {
+    color: #e4bd70;
+    text-decoration: none;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+  }
+
+  .links a:hover {
+    color: #ffe5a8;
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 18px;
+    border-top: 1px solid #30271a;
+    color: #a8a095;
+    font-size: 13px;
+    background: #0b0b0b;
+  }
+
+  @media (max-width: 600px) {
     header {
-      padding: 22px 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #292929;
+      padding: 18px 15px;
     }
-    .logo { color: #e4bd70; font-size: 25px; font-weight: bold; }
-    header span { font-size: 12px; color: #bbb; }
+
+    .logo {
+      font-size: 21px;
+      letter-spacing: 1px;
+    }
+
+    header span {
+      font-size: 9px;
+      letter-spacing: 0.8px;
+    }
+
     .hero {
-      min-height: 75vh;
-      padding: 80px 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: radial-gradient(ellipse at top, #332719, #080808 68%);
+      min-height: 65vh;
+      padding: 70px 18px;
     }
-    .eagle { font-size: 45px; margin-bottom: 12px; }
-    h1 { font-size: clamp(42px, 10vw, 76px); line-height: 1.1; }
-    .gold { color: #e4bd70; }
-    .hero p { color: #ccc; margin: 20px 0 28px; }
-    .button {
-      display: inline-block;
-      background: #e4bd70;
-      color: #080808;
-      padding: 13px 22px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      margin: 5px;
+
+    section {
+      padding: 45px 16px;
     }
-    section { padding: 55px 20px; max-width: 850px; margin: auto; }
-    h2 { font-size: 29px; margin-bottom: 18px; }
+
     .card {
-      background: #151515;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 23px;
-      margin: 15px 0;
+      padding: 19px;
+      border-radius: 11px;
     }
-    .card p, .about p { color: #ccc; }
-    .links { margin-top: 15px; }
-    .links a { color: #e4bd70; margin-right: 14px; }
-    footer {
-      text-align: center;
-      padding: 28px 15px;
-      border-top: 1px solid #292929;
-      color: #999;
-      font-size: 13px;
+
+    .card h3 {
+      font-size: 19px;
     }
-  </style>
+
+    .links {
+      gap: 14px;
+    }
+  }
+</style>
+
 </head>
 <body>
   <header>
