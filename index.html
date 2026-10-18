@@ -208,50 +208,146 @@
       gap: 14px;
     }
   }
-  /* WIZLENNY — FLOWING BLACK & GOLD */
+  
+/* WIZLENNY — LIQUID GOLD EXPERIENCE */
 body {
-  background-color: #050505 !important;
-  background-image:
-    radial-gradient(
-      ellipse at 15% 20%,
-      rgba(212, 175, 55, 0.20),
-      transparent 42%
-    ),
-    radial-gradient(
-      ellipse at 85% 75%,
-      rgba(255, 190, 45, 0.14),
-      transparent 40%
-    ),
-    linear-gradient(
-      125deg,
-      #030303,
-      #171208,
-      #050505,
-      #241900,
-      #030303
-    ) !important;
-  background-size: 200% 200% !important;
-  animation: wizlennyGoldFlow 16s ease-in-out infinite alternate;
-  background-attachment: fixed;
+  position: relative;
+  isolation: isolate;
+  background: #030303 !important;
+  background-image: none !important;
 }
 
-@keyframes wizlennyGoldFlow {
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  pointer-events: none;
+  z-index: 0;
+  background-repeat: no-repeat;
+  will-change: transform, background-position;
+}
+
+body::before {
+  background-image:
+    radial-gradient(ellipse at 18% 30%,
+      rgba(255, 195, 65, 0.85) 0%,
+      rgba(196, 135, 28, 0.42) 15%,
+      transparent 38%),
+    radial-gradient(ellipse at 78% 65%,
+      rgba(225, 172, 56, 0.72) 0%,
+      rgba(153, 103, 20, 0.35) 18%,
+      transparent 42%),
+    radial-gradient(ellipse at 55% 12%,
+      rgba(255, 225, 145, 0.48) 0%,
+      transparent 32%);
+  background-size: 160% 160%;
+  filter: blur(34px) saturate(125%);
+  opacity: 0.7;
+  animation: wizLiquidFlow 20s ease-in-out infinite alternate;
+}
+
+body::after {
+  background-image:
+    radial-gradient(ellipse at 70% 25%,
+      rgba(255, 215, 115, 0.55) 0%,
+      transparent 27%),
+    radial-gradient(ellipse at 25% 78%,
+      rgba(184, 125, 25, 0.5) 0%,
+      transparent 32%),
+    linear-gradient(125deg,
+      transparent 25%,
+      rgba(218, 165, 55, 0.16) 48%,
+      transparent 67%);
+  background-size: 180% 180%;
+  filter: blur(48px);
+  opacity: 0.65;
+  mix-blend-mode: screen;
+  animation: wizLiquidFlow2 27s ease-in-out infinite alternate;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+header,
+footer {
+  background: rgba(5, 5, 5, 0.82) !important;
+  backdrop-filter: blur(12px);
+}
+
+.hero {
+  background:
+    radial-gradient(ellipse at 50% 10%,
+      rgba(104, 72, 25, 0.28),
+      rgba(10, 9, 7, 0.48) 55%,
+      rgba(3, 3, 3, 0.7)) !important;
+}
+
+.card {
+  background: linear-gradient(
+    145deg,
+    rgba(28, 24, 17, 0.86),
+    rgba(8, 8, 8, 0.88)
+  ) !important;
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.35),
+    inset 0 0 22px rgba(212, 175, 55, 0.025);
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  border-color: #e4bd70;
+  box-shadow:
+    0 8px 30px rgba(212, 175, 55, 0.13),
+    inset 0 0 24px rgba(212, 175, 55, 0.06);
+}
+
+.button {
+  box-shadow:
+    0 0 18px rgba(212, 175, 55, 0.16),
+    0 5px 22px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes wizLiquidFlow {
   0% {
     background-position: 0% 20%;
+    transform: rotate(0deg) scale(1);
   }
   50% {
-    background-position: 100% 70%;
+    background-position: 100% 75%;
+    transform: rotate(5deg) scale(1.08);
   }
   100% {
-    background-position: 10% 100%;
+    background-position: 20% 100%;
+    transform: rotate(-4deg) scale(1.03);
+  }
+}
+
+@keyframes wizLiquidFlow2 {
+  0% {
+    background-position: 100% 0%;
+    transform: rotate(-7deg) scale(1.05);
+  }
+  50% {
+    background-position: 0% 100%;
+    transform: rotate(5deg) scale(1.12);
+  }
+  100% {
+    background-position: 80% 20%;
+    transform: rotate(-2deg) scale(1);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body {
+  body::before,
+  body::after {
     animation: none;
   }
 }
+
 </style>
 
 </head>
